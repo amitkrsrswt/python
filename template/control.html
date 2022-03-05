@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>welcome to jinga2 template engine</h1>
+    <p></p>
+    my list is {{list1}}
+    <p></p>
+    <p></p>
+    my dictionary is {{dict}}
+    <p></p>
+    <h2>marks in tabular form</h2>
+    <table border="1">
+      {% for key,value in dict.items(): %}
+      <tr>
+        <th>{{key}}</th>
+        <td>{{value}}></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <h3>if else statements</h3>
+
+    {% if amit in list1 %}
+    <p>data is found in the list</p>
+    {%else %}
+    <p>data not found</p>
+    {%endif%}
+  </body>
+</html>
